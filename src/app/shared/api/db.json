@@ -1,0 +1,40 @@
+{
+  "Employee": [
+    {
+      "id": 101,
+      "name": "A",
+      "post": "FS Developer",
+      "salary": 50000
+    },
+    {
+      "id": 102,
+      "name": "B",
+      "post": "App Developer",
+      "salary": "65000"
+    },
+    {
+      "id": 103,
+      "name": "C",
+      "post": "Java Developer",
+      "salary": 70000
+    },
+    {
+      "id": 104,
+      "name": "D",
+      "post": "Angular Developer",
+      "salary": 80000
+    },
+    {
+      "name": "E",
+      "post": "Developer",
+      "salary": "90000",
+      "id": 105
+    },
+    {
+      "name": "F",
+      "post": "Software Developer",
+      "salary": "95000",
+      "id": 106
+    }
+  ]
+}

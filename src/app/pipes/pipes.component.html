@@ -1,0 +1,48 @@
+<p>pipes works!</p>
+
+<div class="container">
+    <strong>{{msg}}</strong>
+    
+    <!-- string pipes -->
+    <div>{{msg | uppercase}}</div>
+    <div>{{msg | lowercase}}</div>
+    <div>{{msg | titlecase}}</div>
+    <div>{{msg | slice:5-15}}</div>
+
+    <!-- json Pipes -->
+    <div>Json Pipe : {{emp | json}}</div>
+
+    <!-- number pipe -->
+    <div>Number Pipe : <strong>{{5.678}}</strong></div>
+    <div>Number Pipe : <strong>{{5.678 | number:'3.3-7'}}</strong></div>
+    <div>Number Pipe : <strong>{{5.678 | number:'3.5-7'}}</strong></div>
+
+    <!-- currency pipe -->
+    <div>Currency Pipe Default: <strong>{{100 | currency}}</strong></div>
+    <div>Currency Pipe Indian: <strong>{{100 | currency:'INR'}}</strong></div>
+    <div>Currency Pipe Britain: <strong>{{100 | currency:'GBP'}}</strong></div>
+
+    <!-- date pipe -->
+    <div>Date Pipe : <strong>{{d}}</strong></div>
+    <div>Short Date Pipe : <strong>{{d | date:'shortDate'}}</strong></div>
+    <div>Medium Date Pipe : <strong>{{d | date:'mediumDate'}}</strong></div>
+    <div>Long Date Pipe : <strong>{{d | date:'longDate'}}</strong></div>
+
+    <hr>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let e of emp">
+                <td (click)="setId(e.id)">{{e.id}}</td>
+                <td (click)="setName(e.name)">{{e.name | mypipe:e.gender}}</td>
+                <td>{{e.address}}</td>
+                <td>{{e.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

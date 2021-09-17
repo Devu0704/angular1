@@ -1,0 +1,26 @@
+<p>parent works!</p>
+
+<div>Received Data from Child : <strong>{{cData}}</strong></div>
+
+<form>
+    <label>Send data from Parent :  </label>
+    <input type="text" name="pname" #pinput>
+    <button type="button" class="btn btn-primary btn-m" (click)="sendData(pinput.value)">Send</button>
+</form>
+
+
+<app-child (eventObj)="cData=$event"  [parentData]="pData"  ></app-child>
+
+
+<hr>
+<table>
+    <tr>
+        <th>Id</th><th>Name</th><th>Address</th><th>Gender</th>
+    </tr>
+    <tr *ngFor="let e of empData">
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.address}}</td>
+        <td>{{e.gender}}</td>
+    </tr>
+</table>

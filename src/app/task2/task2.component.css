@@ -1,0 +1,29 @@
+.text-danger{
+    color: red;
+}
+
+.font-family{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.special:hover{
+    background-color: lightblue;
+}
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:200px;
+    background-color: blue;  
+    color: yellow;
+}
+
+.btn-x2 {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:200px;
+    background-color: rgb(255, 0, 0);  
+    color: yellow;
+}

@@ -1,0 +1,20 @@
+<form #frmval="ngForm" name="myform" (ngSubmit)="sendData(frmval.value)">
+    <div class="form-group">
+        <label>Enter Employee Name</label>
+        <input type="text" name="name" placeholder="Enter name" class="form-control" [ngModel]="empObj?.name">
+    </div>
+
+    <div class="form-group">
+        <label>Enter Employee Post</label>
+        <input type="text" name="post" placeholder="Enter post" class="form-control" [ngModel]="empObj?.post">
+    </div>
+
+    <div class="form-group">
+        <label>Enter Employee Salary</label>
+        <input type="text" name="salary" placeholder="Enter salary" class="form-control" [ngModel]="empObj?.salary">
+    </div>
+
+    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+    <button type="button" class="btn btn-primary ml-2" routerLink="/crud">Back</button>
+
+</form>

@@ -1,0 +1,24 @@
+<h1>Hii... This is task 2</h1>
+
+<button type="button" class="btn-x2" (click)="car()">Cars</button>
+<button type="button" class="btn-xl" (click)="bike()">Bikes</button>
+<hr>
+
+<div *ngIf="c">
+    <div *ngFor = "let c of cars">
+        <ul>
+            <li (click)="cr(c)">{{c}}</li>  
+        </ul>
+    </div>
+    <div *ngIf="hid"><h3>You have selected {{a}}</h3></div>
+</div>
+<div *ngIf="b">
+    <div *ngFor = "let d of bikes">
+        <ul>
+            <li (click)="bk(d)">{{d}}</li>
+        </ul>
+    </div>
+    <div *ngIf="hidd"><h3>You have selected {{d}}</h3></div>
+</div>
+
+

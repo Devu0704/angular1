@@ -1,0 +1,42 @@
+<form #frmval="ngForm" name="myForm" (ngSubmit)="displayData(frmval.value)">
+    <div class="form-group">
+        <label>Enter Name</label>
+        <input type="text" name="name" #fname="ngModel" class="form-control" [pattern]="pname" ngModel required>
+        <div *ngIf="fname.touched && fname.invalid">
+            <div class="alert alert-danger" *ngIf="fname.hasError('required')">This feild is Required</div>
+            <div class="alert alert-danger" *ngIf="fname.hasError('pattern')">Name feild should contain only Character</div>
+        </div>
+        <!-- {{fname.className}} -->
+    </div>
+
+    <div class="form-group">
+        <label>Enter Email</label>
+        <input type="text" name="email" #refmail="ngModel" class="form-control" [pattern]="pmail" ngModel required>
+        <div *ngIf="refmail.touched && refmail.invalid">
+            <div class="alert alert-danger" *ngIf="refmail.hasError('required')">This feild is Required</div>
+            <div class="alert alert-danger" *ngIf="refmail.hasError('pattern')">Email should be of correct format</div>
+        </div>
+        <!-- {{fname.className}} -->
+    </div>
+
+    <div class="form-group">
+        <label>Enter Contact Number</label>
+        <input type="text" name="contact" #refcontact="ngModel" class="form-control" [pattern]="pmobile" ngModel required>
+        <div *ngIf="refcontact.touched && refcontact.invalid">
+            <div class="alert alert-danger" *ngIf="refcontact.hasError('required')">This feild is Required</div>
+            <div class="alert alert-danger" *ngIf="refcontact.hasError('pattern')">Contact field should contain 10 numbersr</div>
+        </div>
+        <!-- {{fname.className}} -->
+    </div>
+    <div class="form-group form-check">
+        <label>
+            <input type="checkbox" name="term" #refterm="ngModel" class="form-check-input" ngModel required>I accept the Terms and Conditions
+        </label>
+        <div *ngIf="refterm.touched && refterm.invalid">
+            <div class="alert alert-danger" *ngIf="refterm.hasError('required')">This field is Required</div>
+        </div>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary" [disabled]="frmval.invalid">Submit</button>
+</form>

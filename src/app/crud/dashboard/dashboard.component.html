@@ -1,0 +1,23 @@
+
+<button type="button" class="btn btn-primary mb-2" routerLink="add"><i class="fa fa-plus" aria-hidden="true"></i>
+    Add</button>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Post</th><th>Salary</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of EmpArray">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.post}}</td>
+            <td>{{e.salary}}</td>
+            <td>
+                <button type="button" [routerLink]="['/crud','edit',e.id]" class="btn btn-outline-success mr-1"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-outline-danger ml-1" (click)="deleteData(e.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

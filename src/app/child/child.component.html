@@ -1,0 +1,14 @@
+<hr color="red">
+
+<p>Child Component</p>
+
+<form>
+    <label>Send data from Child :  </label>
+    <input type="text" name="cname" #cinput>
+    <button type="button" class="btn btn-primary btn-m" (click)="sendData(cinput.value)">Send</button>
+</form>
+
+<div>Data Received from Parent : <strong>{{parentData}}</strong></div>
+
+
+
